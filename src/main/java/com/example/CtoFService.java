@@ -24,6 +24,16 @@ public class CtoFService {
         JSONObject myJSONObj = new JSONObject();
         myJSONObj.put("message", "This is a converter for C to F!");
         return myJSONObj.toString();
+	}
+
+	@GET
+	@Produces("application/json")
+	public String getInformation(int value) throws Exception, IOException {
+        JSONObject myJSONObj = new JSONObject();
+        int f=value;
+        myJSONObj.put("message", "f");
+        return myJSONObj.toString();
         
 	}
+
 }

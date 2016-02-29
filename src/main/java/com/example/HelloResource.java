@@ -27,14 +27,5 @@ public class HelloResource {
         
 	}
 	
-	@GET
-	@Produces("application/json")
-	public String getInformation(int value) throws Exception, IOException {
-        JSONObject myJSONObj = new JSONObject();
-        int f=value;
-        myJSONObj.put("message", "f");
-        return myJSONObj.toString();
-        
-	}
 
 }
