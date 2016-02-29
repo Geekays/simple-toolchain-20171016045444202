@@ -17,17 +17,16 @@ import com.ibm.json.java.JSONObject;
 // This class define the RESTful API to fetch the database service information
 // <basepath>/api/ctof
 
-@Path("/ctof/{value}")
-public class CtoFService {
+@Path("/ftoc/{value}")
+public class FtoCService {
 
-	//@Path("/ctof/{value}")
 	@GET
 	@Produces("application/json")
 	public String getInformation(@PathParam("value") int value) throws Exception, IOException {
         JSONObject myJSONObj = new JSONObject();
         TempConverter myConverter=new TempConverter();
-        int f= myConverter.CtoF(value);
-        myJSONObj.put("result", f);
+        int result= myConverter.FtoC(value);
+        myJSONObj.put("result", result);
         return myJSONObj.toString();
 	}
 
