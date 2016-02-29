@@ -19,14 +19,6 @@ import com.ibm.json.java.JSONObject;
 @Path("/ctof/{value}")
 public class CtoFService {
 
-	@GET
-	@Produces("application/json")
-	public String getInformation() throws Exception, IOException {
-        JSONObject myJSONObj = new JSONObject();
-        myJSONObj.put("message", "This is a converter for C to F!");
-        return myJSONObj.toString();
-	}
-
 	//@Path("/ctof/{value}")
 	@GET
 	@Produces("application/json")
