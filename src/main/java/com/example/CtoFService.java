@@ -24,8 +24,8 @@ public class CtoFService {
 	@Produces("application/json")
 	public String getInformation(@PathParam("value") int value) throws Exception, IOException {
         JSONObject myJSONObj = new JSONObject();
-        int f=value;
-        myJSONObj.put("message", "f");
+        int f=((value*9)/5)+32;
+        myJSONObj.put("message", f);
         return myJSONObj.toString();
         
 	}
