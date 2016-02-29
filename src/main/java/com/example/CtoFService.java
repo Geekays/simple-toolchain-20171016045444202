@@ -25,7 +25,7 @@ public class CtoFService {
 	public String getInformation(@PathParam("value") int value) throws Exception, IOException {
         JSONObject myJSONObj = new JSONObject();
         int f=((value*9)/5)+32;
-        myJSONObj.put("message", f);
+        myJSONObj.put("result", f);
         return myJSONObj.toString();
         
 	}
