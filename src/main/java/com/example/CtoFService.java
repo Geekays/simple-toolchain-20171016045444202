@@ -5,6 +5,7 @@ import java.util.Set;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
 import com.ibm.json.java.JSON;
@@ -15,7 +16,7 @@ import com.ibm.json.java.JSONObject;
 // This class define the RESTful API to fetch the database service information
 // <basepath>/api/ctof
 
-@Path("/ctof")
+@Path("/ctof/{value}")
 public class CtoFService {
 
 	@GET
@@ -26,9 +27,10 @@ public class CtoFService {
         return myJSONObj.toString();
 	}
 
+	//@Path("/ctof/{value}")
 	@GET
 	@Produces("application/json")
-	public String getInformation(int value) throws Exception, IOException {
+	public String getInformation(@PathParam("value") int value) throws Exception, IOException {
         JSONObject myJSONObj = new JSONObject();
         int f=value;
         myJSONObj.put("message", "f");
