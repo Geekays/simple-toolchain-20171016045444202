@@ -20,7 +20,6 @@ import com.ibm.json.java.JSONObject;
 @Path("/ctof/{value}")
 public class CtoFService {
 
-	//@Path("/ctof/{value}")
 	@GET
 	@Produces("application/json")
 	public String getInformation(@PathParam("value") int value) throws Exception, IOException {
