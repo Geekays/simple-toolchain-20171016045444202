@@ -9,6 +9,16 @@
 <link rel="stylesheet" href="style.css" />
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<style>
+		span {
+			padding: 10px;
+		}
+		
+		input {
+			width: 40px;
+		}
+	</style>
+
 </head>
 <script>
 $(document).ready(function() {
@@ -42,24 +52,31 @@ $(document).ready(function() {
 </script>
 <body>
 	<br>
+	<div class="row">
 	<h1>
 		<b>Message from <a href="api/hello">/api/hello</a></b> : 
 		<span id="messageText"></span>
 	</h1>
 	<p></p>
+	</div>
 	
+	<div class="row">
 	<h1>Celsius to Fahrenheit conversion (ºC to ºF)</h1>
 	<div align="center">
 		<span>Provide temperature in Celsius: <input type="text" id="c1" name="c1"/></span>
 		<input type="button" id="c2f" value="=>"/>
 		<span><input type="text" id="f1" name="f1"/> - Converted temperature in Fahrenheit</span>
 	</div>
-	
+	</div>
+
+
+	<div class="row">
 	<h1>Fahrenheit to Celsius conversion (ºF to ºC)</h1>
 	<div align="center">
 		<span>Provide temperature in Fahrenheit: <input type="text" id="f2" name="f2"/></span>
 		<input type="button" id="f2c" value="=>"/>
 		<span><input type="text" id="c2" name="c2"/> - Converted temperature in Celsius</span>
+	</div>
 	</div>
 </body>
 </html>
