@@ -1,14 +1,10 @@
 package com.example;
 
 import java.io.IOException;
-import java.util.Set;
-
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 
-import com.ibm.json.java.JSON;
-import com.ibm.json.java.JSONArray;
 import com.ibm.json.java.JSONObject;
 
 
