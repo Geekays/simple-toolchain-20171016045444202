@@ -25,11 +25,19 @@ $(document).ready(function() {
 	$("#c2f").click( function() {
 	console.log("Starting C 2 F");
 	$.get("api/ctof/"+$("#c1").val(), function(data) {
-		console.log(data.message);
-		$('#f1').val(data.message);
+		console.log("Returned: ", data.result);
+		$('#f1').val(data.result);
 	})
-	}
-	);
+	});
+	
+	$("#f2c").click( function() {
+		console.log("Starting F 2 C");
+		$.get("api/ftoc/"+$("#f2").val(), function(data) {
+			console.log("Returned: ", data.result);
+			$('#c2').val(data.result);
+		})
+		});
+	
 });
 </script>
 <body>
