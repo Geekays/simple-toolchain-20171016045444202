@@ -21,7 +21,15 @@ $(document).ready(function() {
    	alert( "ERROR calling API" );
   })
 	
-
+	
+	$("#c2f").click( function() {
+	console.log("Starting C 2 F");
+	$.get("api/ctof/"+$("#c1").value, function(data) {
+		console.log(data.message);
+		$('#f1').value(data.message);
+	})
+	}
+	);
 });
 </script>
 <body>
@@ -30,15 +38,20 @@ $(document).ready(function() {
 		<b>Message from <a href="api/hello">/api/hello</a></b> : 
 		<span id="messageText"></span>
 	</h1>
+	<p></p>
+	
 	<h1>Celsius to Fahrenheit conversion (ºC to ºF)</h1>
-	<div>
+	<div align="center">
 		<span>Provide temperature in Celsius: <input type="text" id="c1" name="c1"/></span>
-		<span>Converted temperature in Fahrenheit: <input type="text" id="f1" name="f1"/></span>
+		<input type="button" id="c2f" value="=>"/>
+		<span><input type="text" id="f1" name="f1"/> - Converted temperature in Fahrenheit</span>
 	</div>
+	
 	<h1>Fahrenheit to Celsius conversion (ºF to ºC)</h1>
-	<div>
+	<div align="center">
 		<span>Provide temperature in Fahrenheit: <input type="text" id="f2" name="f2"/></span>
-		<span>Converted temperature in Celsius: <input type="text" id="c2" name="c2"/></span>
+		<input type="button" id="f2c" value="=>"/>
+		<span><input type="text" id="c2" name="c2"/> - Converted temperature in Celsius</span>
 	</div>
 </body>
 </html>
