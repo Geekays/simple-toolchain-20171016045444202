@@ -24,7 +24,7 @@ public class SeleniumTempTest {
 		driver = new FirefoxDriver(profile);
 	}
 
-	@Test
+	//@Test
 	public void verifyCtoF() {
 		//driver.navigate().to(appURL);
 		//String getTitle = driver.getTitle();
